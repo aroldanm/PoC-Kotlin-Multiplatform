@@ -1,0 +1,6 @@
+Target dependency graph (3 targets)
+Shared in Pods
+Pods-iOS-app in Pods, depends on:
+Shared in Pods (explicit)
+iOS-app in iOS-app, depends on:
+Pods-iOS-app in Pods (implicit dependency via file 'Pods_iOS_app.framework' in build phase 'Link Binary'
