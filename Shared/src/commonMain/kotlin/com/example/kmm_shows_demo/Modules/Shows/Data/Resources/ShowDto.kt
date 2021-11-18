@@ -4,14 +4,50 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class ShowDto(
-    val id: Int,
-    val url: String,
-    val name: String
-)
+    val id: Int?,
+    val name: String?,
+    val type: String?,
+    val genres: List<String>?,
+    val status: String?,
+    val averageRuntime: Int?,
+    val premiered: String?,
+    val ended: String?,
+    val officialSite: String?,
+    val rating: Rating?,
+    val network: Network?,
+    val webChannel: WebChannel?,
+    val image: Image?,
+    val summary: String?
+) {
+    @Serializable
+    data class Rating(
+        val average: Double?
+    )
 
-/*
-"schedule":{"time":"22:00","days":["Thursday"]},"rating":{"average":6.5},"weight":98,"network":{"id":2,"name":"CBS","country":{"name":"United States","code":"US","timezone":"America/New_York"}},
-"dvdCountry":null,"externals":{"tvrage":25988,"thetvdb":264492,"imdb":"tt1553656"},"image":{"medium":"https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg",
-    "original":"https://static.tvmaze.com/uploads/images/original_untouched/81/202627.jpg"},"summary":"<p><b>Under the Dome</b> is the story of a small town that is suddenly and inexplicably sealed off from the rest of the world by an enormous transparent dome. The town's inhabitants must deal with surviving the post-apocalyptic conditions while searching for answers about the dome, where it came from and if and when it will go away.</p>",
-"updated":1631010933,"_links":{"self":{"href":"https://api.tvmaze.com/shows/1"},"previousepisode":{"href":"https://api.tvmaze.com/episodes/185054"}}}
-*/
+    @Serializable
+    data class Network(
+        val id: Int?,
+        val name: String?,
+        val country: ChannelCountry?
+    )
+
+    @Serializable
+    data class WebChannel(
+        val id: Int?,
+        val name: String?,
+        val country: ChannelCountry?
+    )
+
+    @Serializable
+    data class ChannelCountry(
+        val name: String?,
+        val code: String?,
+        val timezone: String?
+    )
+
+    @Serializable
+    data class Image(
+        val medium: String?,
+        val original: String?
+    )
+}
