@@ -1,2 +1,0 @@
-com/example/kmm_shows_demo/android/BuildConfig.java
- com.example.kmm_shows_demo.android.BuildConfig
