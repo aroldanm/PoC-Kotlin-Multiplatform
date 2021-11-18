@@ -4,12 +4,13 @@ import com.example.kmm_shows_demo.Commons.Mapper.MapperInterface
 import com.example.kmm_shows_demo.Commons.Utils.guard
 import com.example.kmm_shows_demo.Modules.Shows.Entities.Show
 
-class ShowDtoMapper: MapperInterface<ShowDto, Show> {
+class ShowMapper: MapperInterface<ShowDto, Show> {
     override fun map(input: ShowDto): Show {
-        guard(input.id, input.name)?.let { (id, name) ->
+        guard(input.id, input.name, input.image?.medium)?.let { (id, name, image) ->
             return Show(
                 id = id.toString(),
-                name = name.toString()
+                name = name.toString(),
+                image = image.toString()
             )
         }
         throw Exception("Failure when mapping data")
