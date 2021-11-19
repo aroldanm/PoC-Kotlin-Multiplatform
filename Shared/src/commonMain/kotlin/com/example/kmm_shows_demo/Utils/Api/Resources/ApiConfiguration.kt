@@ -1,4 +1,4 @@
-package com.example.kmm_shows_demo.Commons.Resources
+package com.example.kmm_shows_demo.Utils.Resources
 
 class ApiConfiguration(
     val path: String,

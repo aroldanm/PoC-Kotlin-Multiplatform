@@ -1,7 +1,7 @@
-package com.example.kmm_shows_demo.Commons
+package com.example.kmm_shows_demo.Utils
 
-import com.example.kmm_shows_demo.Commons.Mapper.MapperInterface
-import com.example.kmm_shows_demo.Commons.Resources.ApiConfiguration
+import com.example.kmm_shows_demo.Utils.Mapper.MapperInterface
+import com.example.kmm_shows_demo.Utils.Resources.ApiConfiguration
 import io.ktor.client.*
 import io.ktor.client.features.*
 import io.ktor.client.features.json.*

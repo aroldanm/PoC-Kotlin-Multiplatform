@@ -1,7 +1,7 @@
 package com.example.kmm_shows_demo.Modules.Shows.Data.Mappers
 
-import com.example.kmm_shows_demo.Commons.Mapper.MapperInterface
-import com.example.kmm_shows_demo.Commons.Utils.guard
+import com.example.kmm_shows_demo.Utils.Mapper.MapperInterface
+import com.example.kmm_shows_demo.Utils.Utils.guard
 import com.example.kmm_shows_demo.Modules.Shows.Data.Resources.ShowDto
 import com.example.kmm_shows_demo.Modules.Shows.Entities.ShowDetail
 

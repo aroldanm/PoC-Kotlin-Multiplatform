@@ -1,7 +1,7 @@
 package com.example.kmm_shows_demo.Modules.Shows.Data
 
-import com.example.kmm_shows_demo.Commons.ApiService
-import com.example.kmm_shows_demo.Commons.Resources.ApiConfiguration
+import com.example.kmm_shows_demo.Utils.ApiService
+import com.example.kmm_shows_demo.Utils.Resources.ApiConfiguration
 import com.example.kmm_shows_demo.Modules.Shows.Data.Resources.ShowMapper
 import com.example.kmm_shows_demo.Modules.Shows.Data.Resources.ShowListMapper
 import com.example.kmm_shows_demo.Modules.Shows.Entities.Show
