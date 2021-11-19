@@ -1,16 +1,27 @@
 PODS:
+  - Kingfisher (7.0.0)
   - Shared (1.0)
+  - Wormholy (1.6.4)
 
 DEPENDENCIES:
+  - Kingfisher (~> 7.0)
   - Shared (from `../Shared`)
+  - Wormholy (= 1.6.4)
+
+SPEC REPOS:
+  trunk:
+    - Kingfisher
+    - Wormholy
 
 EXTERNAL SOURCES:
   Shared:
     :path: "../Shared"
 
 SPEC CHECKSUMS:
+  Kingfisher: 5efc54fec3980f92354898532e562cc17f31efb4
   Shared: 4ab3f422248955c147d24ad18c3996b6e4438ce4
+  Wormholy: 2e70f64227e010d363f8d33268369f77faf12471
 
-PODFILE CHECKSUM: eff8f91739b9ca0a945fc0ba38f1ea600bd6edc0
+PODFILE CHECKSUM: eec9d7822387c77b5ba44981a4933fc9b9414efb
 
 COCOAPODS: 1.11.2

@@ -1,14 +1,11 @@
 package com.example.kmm_shows_demo.android
 
-import com.example.kmm_shows_demo.Modules.Shows.Data.ShowsDataRepository
-import com.example.kmm_shows_demo.Modules.Shows.Data.ShowsRemoteDataSource
-import com.example.kmm_shows_demo.Modules.Shows.Domain.ShowsInteractor
+import com.example.kmm_shows_demo.Modules.Shows.SharedModules
+import com.example.kmm_shows_demo.Modules.Shows.ShowsBusinessLogic
 
 class MainResolver {
     fun resolve(): MainViewModel {
-        val dataSource = ShowsRemoteDataSource()
-        val repository = ShowsDataRepository(dataSource)
-        val interactor = ShowsInteractor(repository)
+        val interactor: ShowsBusinessLogic = SharedModules().resolve()
         return MainViewModel(interactor)
     }
 }

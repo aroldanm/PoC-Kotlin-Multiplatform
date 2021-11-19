@@ -2,4 +2,6 @@ target 'iOS-app' do
   use_frameworks!
   platform :ios, '14.1'
   pod 'Shared', :path => '../Shared'
+  pod 'Kingfisher', '~> 7.0'
+  pod 'Wormholy', '1.6.4', :configurations => ['Debug']
 end

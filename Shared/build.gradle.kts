@@ -53,12 +53,7 @@ kotlin {
                 implementation("junit:junit:4.13.2")
             }
         }
-        val iosX64Main by getting {
-            dependencies {
-                // KTOR
-                implementation("io.ktor:ktor-client-ios:$ktorVersion")
-            }
-        }
+        val iosX64Main by getting
         val iosArm64Main by getting
         //val iosSimulatorArm64Main by getting
         val iosMain by creating {
@@ -66,6 +61,10 @@ kotlin {
             iosX64Main.dependsOn(this)
             iosArm64Main.dependsOn(this)
             //iosSimulatorArm64Main.dependsOn(this)
+            dependencies {
+                // KTOR
+                implementation("io.ktor:ktor-client-ios:$ktorVersion")
+            }
         }
         val iosX64Test by getting
         val iosArm64Test by getting
