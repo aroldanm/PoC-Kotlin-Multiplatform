@@ -9,24 +9,11 @@ import kotlinx.coroutines.launch
 class MainViewModel(
     private val businessLogic: ShowsBusinessLogic
 ): ViewModel() {
-    private val mainScope = MainScope()
-
     // Observed Properties
     val model = MutableLiveData<MainModel>()
 
     // View Outputs
     fun onStart() {
-        // TODO: Start loading
-        mainScope.launch {
-            kotlin.runCatching {
-                businessLogic.fetchList()
-            }.onSuccess {
-                // TODO: Update UI
-                // TODO: Stop loading
-            }.onFailure {
-                // TODO: Show error
-                // TODO: Stop loading
-            }
-        }
+        // TODO: Start loading + fetch data
     }
 }

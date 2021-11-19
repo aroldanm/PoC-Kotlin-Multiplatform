@@ -3,8 +3,8 @@ package com.example.kmm_shows_demo.Modules.Shows
 import com.example.kmm_shows_demo.Modules.Shows.Entities.Show
 
 interface ShowsBusinessLogic {
-    suspend fun fetchList(): List<Show>
-    suspend fun fetchDetail(id: String): Show
+    fun fetchList(onSuccess: (List<Show>) -> Unit, onFailure: (Throwable) -> Unit)
+    fun fetchDetail(id: String, onSuccess: (Show) -> Unit, onFailure: (Throwable) -> Unit)
 }
 
 interface ShowsRepository {

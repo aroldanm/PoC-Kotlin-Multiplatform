@@ -19,6 +19,7 @@ struct ShowsListView<
                 .onAppear {
                     viewModel.onAppear()
                 }
+                .navigationBarItems(trailing: button)
                 .navigationBarTitle(Constants.title)
         }
     }
@@ -30,6 +31,12 @@ private extension ShowsListView {
         ShowsListContentView(isLoading: viewModel.isLoading,
                              isError: viewModel.isError,
                              model: viewModel.model)
+    }
+
+    var button: some View {
+        Button("Reload") {
+            viewModel.onAppear()
+        }
     }
 }
 

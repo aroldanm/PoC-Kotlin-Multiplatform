@@ -28,15 +28,15 @@ final class ShowsViewModel<
     
     func onAppear() {
         isLoading = true
-    
-        businessLogic.fetchList { [weak self] shows, error in
-            self?.isLoading = false
-            guard let shows = shows, error == nil else {
-                self?.isError = true
-                return
-            }
+
+        businessLogic.fetchList { [weak self] shows in
             self?.isError = false
+            self?.isLoading = false
             self?.model = ShowListItemVoMapper.map(shows)
+        } onFailure: { [weak self] _ in
+            self?.isError = true
+            self?.isLoading = false
+            self?.model = []
         }
     }
 }
